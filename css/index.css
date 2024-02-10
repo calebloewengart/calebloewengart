@@ -1,0 +1,50 @@
+html
+{
+    background-color: rgba(0, 0, 0, 0.914);
+}
+
+#title
+{
+    
+    margin-top: 5%;
+    text-align: center;
+    transform: scale(150%);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(245, 220, 27);
+}
+
+nav ul
+{
+   list-style-type: none;
+   padding: 5% 5%;
+   flex: content;
+    display: flex;
+}
+
+nav li
+{
+    padding: 5%  5%;
+    flex: content;
+    display: flex;
+    color: white;
+}
+
+a:link
+{
+    color: goldenrod;
+}
+
+a:visited
+{
+    color: gold;
+}
+
+a:hover
+{
+    text-decoration: none;
+}
+
+p
+{
+    color: white;
+}
