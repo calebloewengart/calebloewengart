@@ -35,26 +35,6 @@ nav
     text-align: center;
 }
 
-a:link
-{
-    color: goldenrod;
-}
-
-a:visited
-{
-    color: gold;
-}
-
-a:hover
-{
-    text-decoration: none;
-}
-
-p
-{
-    color: white;
-}
-
 .dropdown
 {
     position: relative;
