@@ -1,6 +1,7 @@
-html
+body
 {
-    background-color: rgba(0, 0, 0, 0.914);
+    background-color: rgb(30, 30, 30);
+    overflow-x: hidden;
 }
 
 #title
@@ -10,23 +11,28 @@ html
     text-align: center;
     transform: scale(150%);
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: rgb(245, 220, 27);
+    color: rgb(246, 221, 34);
 }
 
-nav ul
+nav
 {
-   list-style-type: none;
-   padding: 5% 5%;
-   flex: content;
-    display: flex;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    background-color: rgb(217, 216, 216);
+    margin: 20px 0px 0px 0px;
 }
 
-nav li
+.dropbtn
 {
-    padding: 5%  5%;
-    flex: content;
-    display: flex;
-    color: white;
+    padding: 10px;
+    margin: 10%;
+    background-color: rgb(217, 216, 216);
+    border-style: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
 }
 
 a:link
@@ -47,4 +53,68 @@ a:hover
 p
 {
     color: white;
+}
+
+.dropdown
+{
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content
+{
+    display: none;
+    position: absolute;
+    background-color: rgb(217, 216, 216);
+    padding: 10px;
+    top: 100%;
+    z-index: 1;
+}
+
+.dropdown-content a
+{
+    display: block;
+    color: black;
+}
+
+.dropdown:hover .dropdown-content
+{
+    display: block;
+}
+
+.dropdown-content a:link
+{
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.dropdown-content a:hover
+{
+   text-decoration-style: none;  
+}
+
+#intro
+{
+    text-align: center;
+    padding-top: 10px;
+    font-size: 12pt;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(217, 216, 216);
+}
+
+#index-meme {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+  }
+
+#aletazo
+{
+    color: rgb(30, 30, 30);
+}
+
+#aletazo p
+{
+    color: rgb(30, 30, 30);
 }
