@@ -65,6 +65,7 @@ nav /*MENU SETUP*/
 {
     color: black;
     font-family: 'Courier New', Courier, monospace;
+    text-decoration-style: solid;
 }
 
 .dropdown-content a:hover
