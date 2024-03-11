@@ -1,0 +1,133 @@
+html
+{
+    font-size: 12pt;
+    font-family: Helvetica, sans-serif, arial;
+}
+
+h1
+{
+    font-size: 3em;
+    position: sticky;
+    top:  -1px;
+    padding: 0.5em;
+    background-color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+#title h2
+{
+   font-size: 1.7em;
+   text-align: center;
+}
+
+#title p
+{
+    font-size: 1.2em;
+    text-align: justify;
+}
+
+#title
+{
+    padding: 2.5%;
+    padding-top: 0%;
+}
+
+.show
+{
+    display: none;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+    font-size: 1.2em;
+    text-align: justify;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+.show h4
+{
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.show ul li
+{
+    position: inherit;
+    text-align: left;
+}
+
+.showtitle
+{
+    display: block;
+    justify-content: center;
+    padding: 0.25em;
+    transition: all 1s ease-in-out;
+}
+
+.showtitle h3
+{
+    font-size: 1.5em;
+    transition: all 1s ease-in;
+    text-align: center;
+}
+
+.showtitle ul
+{
+    list-style-type: none;
+}
+
+.showtitle:hover h3
+{
+    font-size: 1.7em;
+}
+
+.showtitle:hover .show
+{
+    display: block;
+    opacity: 1;
+}
+
+.artistsandsongs
+{
+    text-align: center;
+    font-size: 1.1em;
+}
+
+
+@media screen and (max-width: 399px) {
+
+    h1 
+    {
+        font-size: 1.5em;
+    }
+    
+    #title h2
+    {
+        font-size: 1.2em;
+    }
+
+    .show h4
+    {
+        font-size: 1.2em;
+        text-align: center;
+    }
+
+    .showtitle h3 
+    {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 400px)
+{
+    #shows
+    {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-auto-flow: rows;
+    }
+
+
+}
