@@ -9,9 +9,9 @@ function randomValueFromArray(array){
 
 const insertX = ["Willy the Goblin", "Big Daddy", "Father Christmas"];
 const insertY = ["the soup kitchen", "Disneyland",  "the White House"];
-const insertZ = ["spontaneously combusted",    "melted into a puddle on the sidewalk", "turned into a slug and crawled away"];
+const insertZ = ["spontaneously combusted",    "froze into an ice cube", "turned into a slug and crawled away"];
 
-let storyText = "It was 94 fahrenheit outside, so :insertx: went for a walk. When they got to :inserty:, they stared in horror for a few moments, then :insertz:. Bob saw the whole thing, but was not surprised — :insertx: weighs 300 pounds, and it was a hot day.";
+let storyText = "It was 24 fahrenheit outside, so :insertx: went for a stroll. When they got to :inserty:, they stared in shock and awe for a while, then :insertz:. Bob saw the whole thing, but was not surprised — :insertx: weighs 300 pounds, and it was a chilly day.";
 
 
 randomize.addEventListener('click', result);
@@ -34,8 +34,8 @@ function result() {
   if(document.getElementById("uk").checked) {
     const weight = Math.round(300/14);
     newStory = newStory.replace("300 pounds",`${weight} stones`);
-    const temperature =  Math.round(94 -32 / 1.8);
-    newStory = newStory.replace("94 fahrenheit", `${temperature} centegrade`);
+    const temperature =  Math.round((24 -32) / 1.8);
+    newStory = newStory.replace("24 fahrenheit", `${temperature} centegrade`);
 
   }
 
