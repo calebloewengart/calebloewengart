@@ -43,6 +43,7 @@
     <script>
         function displayMessage(msgText, msgType)
         {
+            
             const body = document.body;
 
             const panel = document.createElement("div");
@@ -63,11 +64,11 @@
 
             if (msgType.toLowerCase() === "warning") {
             msg.style.backgroundImage = "url(warning.png)";
-            panel.style.backgroundColor = "red";
+            panel.style.backgroundColor = "rgb(255 20 20)";
             } 
             else if (msgType.toLowerCase() === "chat") {
             msg.style.backgroundImage = "url(chat.png)";
-            panel.style.backgroundColor = "aqua";
+            panel.style.backgroundColor = "rgb(0 0 255 / 40%)";
             } 
             else {
             msg.style.paddingLeft = "20px";
