@@ -1,6 +1,7 @@
 html
 {
     font-size: 12pt;
+    font-variant-ligatures: discretionary-ligatures;
 }
 
 body  /*Global parameters*/
