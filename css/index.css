@@ -39,6 +39,7 @@ nav /*MENU SETUP*/
     font-size: 1.7em;
     font-weight: bold;
     text-align: center;
+    
 }
 
 .dropdown  /*dropdown setup*/
@@ -106,4 +107,33 @@ nav /*MENU SETUP*/
 #aletazo p
 {
     color: rgb(30, 30, 30);
+}
+
+h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(246, 221, 34);
+    text-align: center;
+    font-weight: 200;
+    font-size: 2em;
+  }
+  
+  body {
+    width: 640px;
+    margin: 0 auto;
+      background-color: rgb(30, 30, 30);
+      overflow-x: hidden;
+  
+  }
+
+  button {
+    width: 25vw;
+    font-size: 1.5em;
+    background-color: rgb(246, 221, 34);
+    color: rgb(30, 30, 30);
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    margin: 2.5%;
 }
