@@ -47,6 +47,15 @@ class Ball {
 
       this.x += this.velX;
       this.y += this.velY;
+
+      if(this.velX === 0){
+        this.velX = 1;
+      }
+      
+      if(this.velY === 0)
+      {
+        this.velY = 1;
+      }
   }
 
   collsionDetect(){
@@ -75,7 +84,7 @@ testBall2.draw();
 
 const balls = [];
 
-while(balls.length < 10)
+while(balls.length < 20)
 {
   const size = random(1, 20);
   const ball = new Ball (
