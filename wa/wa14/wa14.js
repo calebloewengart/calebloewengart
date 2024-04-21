@@ -39,6 +39,7 @@ function populateEmployees(obj){
         article.appendChild(myPara4);
 
         section.appendChild(article);
+        console.log(section);
     }
 
 }
