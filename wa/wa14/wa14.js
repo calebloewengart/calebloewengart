@@ -1,12 +1,18 @@
 async function populate(){
-    const requestURL = "calebloewengart.me/wa/wa14/humanResources.json";
+    const requestURL = "humanResources.json";
     const request = new Request (requestURL);
 
-    const response = await fetch(request);
-    const humanResources = await response.json();
+    try {
+        const response = await fetch(request);
+        const humanResources = await response.json();
+        populateEmployees(humanResources);
+    } catch (error) {
+        console.error('Error fetching data:', error);
+    }
 
-    populateEmployees(humanResources);
 }
+
+populate();
 
 function populateEmployees(obj){
     const section = document.querySelector("div");
@@ -43,3 +49,4 @@ function populateEmployees(obj){
     }
 
 }
+
