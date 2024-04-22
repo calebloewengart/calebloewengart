@@ -87,6 +87,7 @@ function populateEmployees(obj){
         else{
             myPara5.textContent += "No";
         }
+        console.log(myPara5);
 
         article.appendChild(myH2);
         article.appendChild(myPara1);
