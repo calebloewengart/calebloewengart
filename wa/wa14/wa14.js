@@ -101,6 +101,7 @@ function populateEmployees(obj){
     const totalSalary = document.createElement('h3');
     totalSalary.textContent =  `Total Salaries: $${total}`;
     section.appendChild(totalSalary);
+    console.log(totalSalary);
 
 }
 
