@@ -7,7 +7,7 @@ async function populate(){
         const humanResources = await response.json();
         populateEmployees(humanResources);
     } catch (error) {
-        console.error('Error fetching data:', error);
+        console.error('Oops! Error fetching data:', error);
     }
 
 }
