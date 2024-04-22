@@ -82,7 +82,7 @@ function populateEmployees(obj){
         //Q6
         myPara5.textContent = `Working from home: `;
         if(employee.wfh === true){
-            myPara5.textConent += "Yes";
+            myPara5.textContent += "Yes";
         }
         else{
             myPara5.textContent += "No";
