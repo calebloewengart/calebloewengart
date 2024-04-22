@@ -1,15 +1,44 @@
+let text = `{
+    "companyName": "Tech Stars",
+    "website": "www.techstars.site",
+    "employees":[
+        {
+            "firstname": "Sam",
+            "department": "Tech",
+            "designation": "Manager",
+            "salary": 40000,
+            "raiseeligible": true
+        },
+        {
+            "firstname": "Mary",
+            "department": "Finance",
+            "designation": "Trainee",
+            "salary": 18500,
+            "raiseeligible": true
+        },
+        {
+            "firstname": "Bill",
+            "department": "HR",
+            "designation": "Executive",
+            "salary": 21200,
+            "raiseeligible": false
+        },
+        {
+            "firstname": "Anna",
+            "department": "Tech",
+            "designation":"Executive",
+            "salary": 25600,
+            "raiseeligible": false
+
+        }
+    ]
+}`
+
+const humanResources = JSON.parse(text);
+console.log(humanResources);
+
 async function populate(){
-    const requestURL = "humanResources.json";
-    const request = new Request (requestURL);
-
-    try {
-        const response = await fetch(request);
-        const humanResources = await response.json();
-        populateEmployees(humanResources);
-    } catch (error) {
-        console.error('Oops! Error fetching data:', error);
-    }
-
+    populateEmployees(humanResources);
 }
 
 populate();
