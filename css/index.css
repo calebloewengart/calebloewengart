@@ -39,6 +39,7 @@ nav /*MENU SETUP*/
     font-size: 1.7em;
     font-weight: bold;
     text-align: center;
+    width: inherit;
     
 }
 
@@ -46,6 +47,7 @@ nav /*MENU SETUP*/
 {
     position: relative;
     display: inline-block;
+    width: inherit;
 }
 
 .dropdown-content  /*dropdown content base*/
