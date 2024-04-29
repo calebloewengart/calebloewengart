@@ -1,6 +1,16 @@
 let button = document.querySelector("#vol");
 let text = document.createElement('p');
 let volume = document.createElement('p');
+let requestBody = `
+    {
+    "event": {
+      "token": "TOKEN",
+      "expectedAction": "USER_ACTION",
+      "siteKey": "6LdKTcopAAAAAG5cT8JWqEUUoTvI60TXwcCks-3U",
+    }}`;
+
+const request = JSON.parse(text);
+console.log(request);   
 
 function onSubmit(token) {
     document.getElementById("demo-form").submit();
