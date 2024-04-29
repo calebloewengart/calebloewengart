@@ -5,29 +5,39 @@ let volume = document.createElement('p');
 text.textContent = "Click to change volume!";
 button.appendChild(text);
 
+function random(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function randomRGB() {
+    return `rgb(${random(0, 255)},${random(0, 255)},${random(0, 255)})`;
+}
+
 function changeVolume()
 {
     
     volume.textContent = Math.random()*100;
-    button.appendChild(volume);
 }
 
 changeVolume();
+button.appendChild(volume);
 
 let x = 0;
 
-button.addEventListener('click', ()=>{
-    if(x % 7 !== 0){
-       changeVolume(); 
-    }  
-       
-    x++;
+button.addEventListener('click', ()=>{ 
+
+    changeVolume(); 
+    document.getElementById("vol").style.backgroundColor = randomRGB();
+    x++; 
+
     if (x % 2 === 0 && x % 10 !== 0){
         alert("Have you found your volume yet?");
     }
-    if (x % 10 === 0){
+    else if (x % 10 === 0){
         alert("you're still here?");
     }
+
+    //Goofy prompt
     if (x % 4 === 0){
         let prompt = prompt("you good bro? (answer yes or no)", "no");
         if (prompt.toLowerCase() === "yes"){
@@ -38,22 +48,37 @@ button.addEventListener('click', ()=>{
             alert("Womp womp, cry about it."); 
         }
     }
-    if(x % 7 === 0)
+
+    //Change button color
+
+
+    else if(x % 6 === 0)
     {
-        let vulome = prompt("Please enter your volume", "0");
-        volume.textContext = vulome - 20;
-        button.appendChild(volume);
+        document.getElementById("vol").style.backgroundColor = "rgb(30, 30, 30)";
+    }
+    else if (x % 6 === 1)
+    {
+        document.getElementById("vol").style.backgroundColor = "rgb(246, 221, 34)";
     }
 
-    if(x % 15 === 0)
+    if(x % 7 === 0)
+    {
+        let newVolume = prompt("Please enter your volume", "-50");
+        if (newVolume !== null) {
+            volume.textContent = parseFloat(newVolume) + 50; // Update volume with the new value
+        }
+    }
+
+    //Popups
+    if(x % 9 === 0)
     {
         window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ",
         "", "width=500, height=500");
     }
-
-    if(x % 11 === 0)
+    else if(x % 3 === 0 && x >= 9)
     {
         window.open("https://www.youtube.com/watch?v=Jlr_2XOJvrY",
         "", "width=500, height=500");
     }
+
 })
