@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS Midterm</title>
     <link rel="stylesheet" type="text/css" href="../css/index.css">
+    <script src="https://www.google.com/recaptcha/enterprise.js?render=6LdKTcopAAAAAG5cT8JWqEUUoTvI60TXwcCks-3U"></script>
     <style>
         div
         {
@@ -16,7 +17,10 @@
     </style>
 </head>
 <body>
-    <div><button id="vol"></button></div>
+    <div><button id="vol" class="g-recaptcha"
+        data-sitekey="6LdKTcopAAAAAG5cT8JWqEUUoTvI60TXwcCks-3U"
+        data-callback='onSubmit'
+        data-action='submit'></button></div>
     <script src="script.js"></script>
 </body>
 </html>
