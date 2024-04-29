@@ -42,17 +42,18 @@ button.addEventListener('click', ()=>{
     {
         let vulome = prompt("Please enter your volume", "0");
         volume.textContext = vulome - 20;
+        button.appendChild(volume);
     }
 
     if(x % 15 === 0)
     {
         window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-        "", "width=300, height=300");
+        "", "width=500, height=500");
     }
 
     if(x % 11 === 0)
     {
         window.open("https://www.youtube.com/watch?v=Jlr_2XOJvrY",
-        "", "width=300, height=300");
+        "", "width=500, height=500");
     }
 })
