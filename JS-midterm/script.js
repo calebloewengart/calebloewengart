@@ -1,6 +1,9 @@
 let button = document.querySelector("#vol");
+let submit = document.querySelector("#submit");
+let container = document.querySelector('#container');
 let text = document.createElement('p');
 let volume = document.createElement('p');
+
 
 text.textContent = "Click to change volume!";
 button.appendChild(text);
@@ -16,69 +19,77 @@ function randomRGB() {
 function changeVolume()
 {
     
-    volume.textContent = Math.random()*100;
+    volume.textContent = random(0,100);
+    return volume;
+}
+
+function changeButtonColor(){
+    document.getElementById("vol").style.backgroundColor = randomRGB();
+}
+
+function alert1(){
+    alert("Have you found your volume yet?");
+}
+
+function alert2(){
+    alert("you're still here?");
+}
+
+function goofyPrompt(){
+    const prompt = prompt("you good bro? (answer yes or no)", "no");
+    if (prompt.toLowerCase() === "yes"){
+        alert("Glad to hear it :-)");
+    }
+    else
+    {
+        alert("Womp womp, cry about it."); 
+    }
+}
+
+function disappearButton(){
+    document.getElementById("vol").style.backgroundColor = "rgb(30, 30, 30)";
+}
+
+
+function enterVolume(){
+    let newVolume = prompt("Please enter your volume", "0");
+    if (newVolume !== null) {
+        volume.textContent = parseFloat(newVolume) + random(0, 50); // Update volume with the new value
+    }
+}
+
+function popups(){
+    const popup = ["https://www.youtube.com/watch?v=dQw4w9WgXcQ", "https://www.youtube.com/watch?v=Jlr_2XOJvrY", "https://www.youtube.com/watch?v=Sdkwu2FvFfI","https://www.youtube.com/watch?v=M9K2guaz_7E", "https://www.youtube.com/watch?v=GtRuQqqVLZE"];
+    window.open(popup[random(0,4)],
+    "", "width=500, height=500");
 }
 
 changeVolume();
 button.appendChild(volume);
 
 let x = 0;
+const functions = [
+    alert1,
+    alert2,
+    goofyPrompt,
+    disappearButton,
+    enterVolume,
+    popups
+]
 
 button.addEventListener('click', ()=>{ 
 
     changeVolume(); 
-    document.getElementById("vol").style.backgroundColor = randomRGB();
-    x++; 
+    changeButtonColor();
+    functions[random(0,5)]();
 
-    if (x % 2 === 0 && x % 10 !== 0){
-        alert("Have you found your volume yet?");
-    }
-    else if (x % 10 === 0){
-        alert("you're still here?");
-    }
+})
 
-    //Goofy prompt
-    if (x % 4 === 0){
-        let prompt = prompt("you good bro? (answer yes or no)", "no");
-        if (prompt.toLowerCase() === "yes"){
-            alert("Glad to hear it :-)");
-        }
-        else
-        {
-            alert("Womp womp, cry about it."); 
-        }
-    }
-
-    //Change button color
-
-
-    else if(x % 6 === 0)
-    {
-        document.getElementById("vol").style.backgroundColor = "rgb(30, 30, 30)";
-    }
-    else if (x % 6 === 1)
-    {
-        document.getElementById("vol").style.backgroundColor = "rgb(246, 221, 34)";
-    }
-
-    if(x % 7 === 0)
-    {
-        let newVolume = prompt("Please enter your volume", "-50");
-        if (newVolume !== null) {
-            volume.textContent = parseFloat(newVolume) + 50; // Update volume with the new value
-        }
-    }
-
-    //Popups
-    if(x % 9 === 0)
-    {
-        window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-        "", "width=500, height=500");
-    }
-    else if(x % 3 === 0 && x >= 9)
-    {
-        window.open("https://www.youtube.com/watch?v=Jlr_2XOJvrY",
-        "", "width=500, height=500");
-    }
-
+submit.addEventListener('click', ()=>{
+    let submission = document.createElement('div');
+    submission.setAttribute('id', 'submitted');
+    let sub = document.createElement('p');
+    sub.textContent = "You've set your volume to: " + volume.textContent;
+    submission.appendChild(sub);
+    container.appendChild(submission);
 })
