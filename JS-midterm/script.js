@@ -92,4 +92,13 @@ submit.addEventListener('click', ()=>{
     sub.textContent = "You've set your volume to: " + volume.textContent;
     submission.appendChild(sub);
     container.appendChild(submission);
+
+    let change = document.createElement('button');
+    change.setAttribute('id', 'change');
+    change.textContent = "Change volume";
+    submission.appendChild(change);
+
+    change.addEventListener('click', ()=>{
+        submission.remove();
+    })
 })
